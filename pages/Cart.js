@@ -1,5 +1,4 @@
-import React from 'react'
-import CartItem from '../../components/CartItem'
+import CartItem from '../components/CartItem'
 
 export default function Cart() {
   const cartItems = [
