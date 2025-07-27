@@ -1,0 +1,29 @@
+# Node modules
+node_modules/
+
+# Parcel cache
+.parcel-cache/
+
+# Build output
+dist/
+
+# Log files
+*.log
+
+# Dependency directories
+package-lock.json
+
+# System files
+.DS_Store
+Thumbs.db
+
+# IDE specific
+.vscode/
+.idea/
+
+# Optional: ignore environment files
+.env
+.env.local
+.env.development
+.env.test
+.env.production
