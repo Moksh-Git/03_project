@@ -16,24 +16,3 @@ const reducer = combineReducers({
 })
 
 export const store = createStore(reducer, window.__REDUX_DEVTOOLS_EXTENSION__?.());
-
-console.log(store);
-
-store.dispatch(addCartItemQuantity(1,1));
-store.dispatch(addCartItemQuantity(12,1));
-store.dispatch(addCartItemQuantity(15,1));
-store.dispatch(addCartItemQuantity(6,1));
-store.dispatch(decreaseCartItemQuantity(12));
-store.dispatch(decreaseCartItemQuantity(15));
-
-
-
-
-store.dispatch(addInWishList(3));
-store.dispatch(addInWishList(5));
-store.dispatch(addInWishList(11));
-store.dispatch(addInWishList(14));
-store.dispatch(removeInWishList(3));
-store.dispatch(removeInWishList(5));
-
-console.log(store.getState());

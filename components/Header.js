@@ -1,7 +1,13 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link } from "react-router-dom";
+import carticon from "../assets/cart-icon.svg";
+import { useSelector } from "react-redux";
 
 export default function Header() {
+  const cart = useSelector((state) => {
+    return state.cartItem;
+  });
+  console.log(cart);
+
   return (
     <header>
       <div className="header-contents">
@@ -9,10 +15,12 @@ export default function Header() {
           <Link to="/">Shopee</Link>
         </h1>
         <Link className="cart-icon" to="/cart">
-          <img  alt="cart-icon" />
-          <div className="cart-items-count">0</div>
+          <img src={carticon} alt="cart-icon" />
+          <div className="cart-items-count">
+            {cart.reduce((accu, curr) => accu + curr.quantity, 0)}
+          </div>
         </Link>
       </div>
     </header>
-  )
+  );
 }
