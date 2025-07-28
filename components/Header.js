@@ -1,12 +1,11 @@
 import { Link } from "react-router-dom";
 import carticon from "../assets/cart-icon.svg";
-import { useSelector } from "react-redux";
+import { useSelector } from "../react-redux";
 
 export default function Header() {
   const cart = useSelector((state) => {
     return state.cartItem;
   });
-  console.log(cart);
 
   return (
     <header>
